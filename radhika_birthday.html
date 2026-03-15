@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Radhika</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd86f);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+.container{
+background:rgba(0,0,0,0.25);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(8px);
+max-width:500px;
+}
+
+img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid white;
+margin-bottom:20px;
+object-fit:cover;
+}
+
+h1{
+font-size:40px;
+}
+
+p{
+font-size:20px;
+}
+
+button{
+margin-top:20px;
+padding:14px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.surprise{
+display:none;
+margin-top:20px;
+font-size:20px;
+}
+
+.confetti{
+position:absolute;
+width:10px;
+height:10px;
+background:white;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-100vh) rotate(0deg);}
+100%{transform:translateY(100vh) rotate(360deg);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ADD PHOTO HERE -->
+<img src="IMG_7102.PNG">
+
+<h1>🎂 Happy Birthday Radhika 🎉</h1>
+
+<p>
+Wish you a happy birthday Radhika 🥳 <br>
+May your life be bright and filled with happiness and success 🥰
+</p>
+
+<button onclick="showSurprise()">Open Your Surprise 🎁</button>
+
+<div id="surprise1" class="surprise">
+🎉 Radhika!  
+May your birthday be full of happiness, laughter, and beautiful memories. 💖
+</div>
+
+<div id="surprise2" class="surprise">
+✨ You are a wonderful person and deserve all the success and joy in life.  
+May your dreams come true! 🌟
+</div>
+
+<div id="surprise3" class="surprise">
+🎂 Once again Happy Birthday Radhika! 🎂 <br><br>
+Wishes From ❤️ <br>
+<b>Manikanta, Srinivas, Sathwika & Harika</b>
+</div>
+
+</div>
+
+<!-- Birthday Music -->
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/audio/2022/10/25/audio_9466c0f8c4.mp3">
+</audio>
+
+<script>
+
+let count=0;
+
+function showSurprise(){
+
+count++;
+
+if(count==1){
+document.getElementById("surprise1").style.display="block";
+}
+
+else if(count==2){
+document.getElementById("surprise2").style.display="block";
+}
+
+else if(count==3){
+document.getElementById("surprise3").style.display="block";
+}
+
+}
+
+for(let i=0;i<70;i++){
+let confetti=document.createElement("div");
+confetti.className="confetti";
+confetti.style.left=Math.random()*100+"%";
+confetti.style.animationDuration=(3+Math.random()*3)+"s";
+document.body.appendChild(confetti);
+}
+
+</script>
+
+</body>
+</html>
